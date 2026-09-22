@@ -1,4 +1,5 @@
 export function initLightbox () {
+  const html = document.documentElement
   const lightbox = document.querySelector('.lightbox')
   const lightboxImg = document.querySelector('.lightbox__img')
   const sliderTrack = document.querySelector('.product-slider__track')
@@ -18,13 +19,13 @@ export function initLightbox () {
     lightboxImg.alt = slide.alt
 
     lightbox.classList.add('lightbox--active')
-    document.body.classList.add('scroll-lock')
+    html.classList.add('scroll-lock')
   })
 
   lightbox.addEventListener('click', (event) => {
     if (event.target === lightbox || event.target.closest('.lightbox__close')) {
       lightbox.classList.remove('lightbox--active')
-      document.body.classList.remove('scroll-lock')
+      html.classList.remove('scroll-lock')
 
       setTimeout(() => {
         if (!lightbox.classList.contains('lightbox--active')) {
@@ -37,7 +38,7 @@ export function initLightbox () {
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && lightbox.classList.contains('lightbox--active')) {
       lightbox.classList.remove('lightbox--active')
-      document.body.classList.remove('scroll-lock')
+      html.classList.remove('scroll-lock')
     }
   })
 }

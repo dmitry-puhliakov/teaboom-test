@@ -1,13 +1,14 @@
 export function initBurger () {
+  const html = document.documentElement
   const burgerBtn = document.querySelector('.header__burger')
   const closeBurgerBtn = document.querySelector('.header-menu__item--close')
   const sidebar = document.querySelector('.header-menu')
-  const body = document.body
 
   if (burgerBtn && sidebar && closeBurgerBtn) {
     const toggleMenu = () => {
+      console.log('FOO', html)
       sidebar.classList.toggle('header-menu--active')
-      body.classList.toggle('scroll-lock')
+      html.classList.toggle('scroll-lock')
     }
 
     burgerBtn.addEventListener('click', toggleMenu)

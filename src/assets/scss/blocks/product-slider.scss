@@ -29,6 +29,12 @@
       opacity: 1;
     }
   }
+
+  @include sm {
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .product-slider__track {
@@ -67,6 +73,7 @@
   background: $c-btn-bg;
   font-weight: 700;
   font-size: 24rem;
+  line-height: 1;
   color: $c-btn-text;
   cursor: pointer;
 
