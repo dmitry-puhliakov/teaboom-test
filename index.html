@@ -40,9 +40,19 @@
       <main>
         <article class="product-card">
           <div class="product-card__image-slider product-slider">
-            <button class="product-slider__btn product-slider__btn--prev product-slider__btn--disable">❮</button>
+            <button
+              class="product-slider__btn product-slider__btn--prev product-slider__btn--disable"
+              type="button"
+            >
+              ❮
+            </button>
             <div class="product-slider__track"></div>
-            <button class="product-slider__btn product-slider__btn--next">❯</button>
+            <button
+              class="product-slider__btn product-slider__btn--next"
+              type="button"
+            >
+              ❯
+            </button>
           </div>
           <div class="product-card__info">
             <span class="product-card__category"></span>
@@ -60,6 +70,7 @@
               </div>
               <button
                 class="product-card__buy-btn btn"
+                type="button"
                 data-toast="🛒 Товар успешно добавлен в корзину!"
               >
                 В корзину
@@ -152,8 +163,14 @@
     </footer>
     <!-- Модалка для картинок (Лайтбокс) -->
     <div class="lightbox">
-      <button class="lightbox__close" id="lightbox-close" aria-label="Закрыть">&times;</button>
-      <img class="lightbox__img" id="lightbox-img" src="" alt="Увеличенное изображение">
+      <button
+        class="lightbox__close"
+        type="button"
+        aria-label="Закрыть"
+      >
+        &times;
+      </button>
+      <img class="lightbox__img" src="" alt="Увеличенное изображение">
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

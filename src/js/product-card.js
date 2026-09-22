@@ -20,6 +20,7 @@ function renderVariants() {
     const btn = document.createElement('button')
 
     btn.classList.add('variant-btn', 'btn')
+    btn.type = 'button'
     btn.textContent = variant.weight
     btn.dataset.index = index
     btn.dataset.toast = `⚖️ Выбрана фасовка ${variant.weight}`

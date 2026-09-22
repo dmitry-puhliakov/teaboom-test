@@ -1,4 +1,5 @@
 import './assets/scss/main.scss'
+
 import { initBurger } from './js/burger-menu.js'
 import { initProductCard } from './js/product-card'
 import { initProductSlider } from './js/product-slider'
