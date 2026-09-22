@@ -1,11 +1,8 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  font-size: 120px;
-  font-weight: 900;
-  color: red;
-}
+@import "reset";
+@import "fonts";
+@import "colors";
+@import "variables";
+@import "mixins";
+@import "init";
+@import "container";
+@import "blocks";

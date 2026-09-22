@@ -1,0 +1,22 @@
+.btn {
+  height: 48rem;
+  padding: 0 24rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: $c-btn-bg;
+  font-weight: 700;
+  font-size: 18rem;
+  color: $c-btn-text;
+  white-space: nowrap;
+  outline: none;
+  cursor: pointer;
+
+  @include transition();
+
+  &:hover {
+    background-color: $c-btn-bg-hover;
+    color: $c-btn-text-hover;
+  }
+}

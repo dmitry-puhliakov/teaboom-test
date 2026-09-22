@@ -1,0 +1,59 @@
+.lightbox {
+  z-index: 999;
+  position: fixed;
+  inset: 0;
+  padding: 24rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: $c-overlay-bg;
+  opacity: 0;
+  pointer-events: none;
+
+  @include transition(opacity);
+
+  @include md {
+    display: flex;
+  }
+}
+
+.lightbox--active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: 0 16rem 48rem rgba(0,0,0, 0.6);
+  transform: scale(0.9);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  .lightbox--active & {
+  transform: scale(1);
+  }
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 28rem;
+  right: 28rem;
+  width: 64rem;
+  height: 64rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  font-size: 48rem;
+  line-height: 1;
+  color: $c-close;
+  cursor: pointer;
+
+  @include transition();
+
+  &:hover {
+    color: $c-close-hover;
+  }
+}

@@ -1,0 +1,128 @@
+.product-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+
+  @include md {
+    flex-direction: row;
+    gap: 32rem;
+  }
+}
+
+.product-card__image-wrap {
+  flex-shrink: 0;
+}
+
+.product-card__image {
+  width: 100%;
+
+  @include md {
+    width: 420rem;
+    height: 420rem;
+  }
+}
+
+.product-card__info {
+  flex-grow: 1;
+}
+
+.product-card__category {
+  margin-bottom: 8rem;
+  display: block;
+  font-size: 16rem;
+  color: $c-text-dark-3;
+}
+
+.product-card__title {
+  margin-bottom: 16rem;
+  font-size: 32rem;
+  font-weight: 700;
+  color: $c-text-dark-1;
+
+  @include md {
+    margin-bottom: 32rem;
+  }
+}
+
+.product-card__variant-item {
+  margin-bottom: 16rem;
+  padding: 16rem;
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+  flex-wrap: wrap;
+  border: 1rem solid $c-border-gray;
+  background-color: $c-bg-primary;
+
+  @include md {
+    margin-bottom: 32rem;
+    gap: 32rem;
+  }
+}
+
+.product-card__variant-block {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 16rem;
+
+  @include md {
+    gap: 32rem;
+  }
+}
+
+.product-card__weight {
+  margin-bottom: 8rem;
+  font-size: 18rem;
+  font-weight: 700;
+  color: $c-text-dark-2;
+}
+
+.product-card__article {
+  font-size: 14rem;
+  color: $c-text-dark-4;
+}
+
+.product-card__price {
+  margin-bottom: 4rem;
+  display: block;
+  font-size: 22rem;
+  font-weight: 700;
+  color: $c-text-red;
+}
+
+.product-card__old-price {
+  font-size: 16rem;
+  text-decoration: line-through;
+  color: $c-text-dark-4;
+}
+
+.product-card__buy-btn {
+  flex-grow: 1;
+}
+
+.product-card__variants {
+  width: 100%;
+  margin-bottom: 16rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16rem;
+
+  @include md {
+    margin-bottom: 32rem;
+  }
+}
+
+.product-card__description {
+  padding: 16rem;
+  background-color: $c-bg-secondary;
+  font-size: 16rem;
+  color: $c-text-dark-2;
+  line-height: 1.2;
+
+  @include md {
+    padding: 32rem;
+  }
+}

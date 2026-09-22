@@ -1,0 +1,22 @@
+
+.body {
+  background-color: $c-body-bg;
+}
+.body__header {
+  min-height: 104rem;
+
+  @include md {
+    min-height: 176rem;
+  }
+}
+
+.body__body {
+  min-height: calc(100vh - 104rem);
+  padding-bottom: 48rem;
+  display: flex;
+  gap: 32rem;
+
+  @include md {
+    min-height: calc(100vh - 176rem);
+  }
+}

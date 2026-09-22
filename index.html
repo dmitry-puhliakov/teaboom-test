@@ -6,7 +6,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>teaboom-test</title>
   </head>
-  <body>
+  <body class="body">
+    <header class="body__header header">
+      <section class="header__top">
+        <div class="header__top-inner _container">
+          <div class="header__block">
+            <img src="/images/logo.png" alt="" class="header__logo">
+            <div class="header__title-block">
+              <h3 class="header__title">Чайный Бум</h3>
+              <h4 class="header__subtitle">Интернет-магазин чая и посуды</h4>
+            </div>
+          </div>
+          <div class="header__block">
+            <img src="/images/burger-icon.svg" alt="" class="header__burger">
+          </div>
+        </div>
+      </section>
+      <section class="header__bottom">
+        <nav class="_container">
+          <ul class="header-menu">
+            <li class="header-menu__item header-menu__item--close">&times;</li>
+            <li class="header-menu__item"><a>Главная</a></li>
+            <li class="header-menu__item"><a>Каталог</a></li>
+            <li class="header-menu__item"><a>Подарки</a></li>
+            <li class="header-menu__item"><a>Прайслист</a></li>
+            <li class="header-menu__item"><a>Отзывы</a></li>
+            <li class="header-menu__item"><a>Контакты</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <div class="body__body _container">
+      <main>
+        <article class="product-card">
+          <div class="product-card__image-slider product-slider">
+            <button class="product-slider__btn product-slider__btn--prev product-slider__btn--disable">❮</button>
+            <div class="product-slider__track"></div>
+            <button class="product-slider__btn product-slider__btn--next">❯</button>
+          </div>
+          <div class="product-card__info">
+            <span class="product-card__category"></span>
+            <h1 class="product-card__title"></h1>
+            <div class="product-card__variant-item">
+              <div class="product-card__variant-block">
+                <div class="product-card__article-block">
+                  <p class="product-card__weight"></p>
+                  <p class="product-card__article">Арт. <span id="product-article"></span></p>
+                </div>
+                <div class="product-card__price-block">
+                  <span class="product-card__price"></span>
+                  <del class="product-card__old-price"></del>
+                </div>
+              </div>
+              <button
+                class="product-card__buy-btn btn"
+                data-toast="🛒 Товар успешно добавлен в корзину!"
+              >
+                В корзину
+              </button>
+            </div>
+            <div class="product-card__variants"></div>
+            <div class="product-card__description"></div>
+          </div>
+        </article>
+      </main>
+      <aside>
+        <nav class="side-menu">
+          <h3 class="side-menu__title">Категории</h3>
+          <ul class="side-menu__list">
+            <li class="side-menu__item"><a>Чёрный чай</a></li>
+            <li class="side-menu__item"><a>Зелёный чай</a></li>
+            <li class="side-menu__item"><a>Красный чай</a></li>
+            <li class="side-menu__item"><a>Белый чай</a></li>
+            <li class="side-menu__item"><a>Жёлтый чай</a></li>
+            <li class="side-menu__item"><a>Фиолетовый чай</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+    <footer class="body__footer footer">
+      <div class="_container">
+        <div class="footer__inner">
+          <section class="footer__section">
+            <h3 class="footer__title">Контакты</h3>
+            <div class="footer__item">
+              <h4 class="footer__subtitle">Адрес</h4>
+              <p>Москва, ул. 1-я Боевская, д. 2/12, стр. 4, пом. 1/1</p>
+            </div>
+            <div class="footer__item">
+              <h4 class="footer__subtitle">Телефоны</h4>
+              <p>+7 (495) 120-15-51</p>
+              <p>+7 (495) 796-79-74</p>
+            </div>
+            <div class="footer__item">
+              <h4 class="footer__subtitle">Email</h4>
+              <p>info@teaboom.ru</p>
+            </div>
+            <div class="footer__item">
+              <h4 class="footer__subtitle">Режим работы</h4>
+              <p>пн - пт с 10:00 до 19:00</p>
+              <p>сб - вс с 12:00 до 16:00</p>
+            </div>
+          </section>
+          <section class="footer__section">
+            <h3 class="footer__title">Компания</h3>
+            <div class="footer__item">
+               <a>Наши сервисы</a>
+            </div>
+            <div class="footer__item">
+               <a>Бизнес с нами</a>
+            </div>
+            <div class="footer__item">
+               <a>Вакансии</a>
+            </div>
+          </section>
+          <section class="footer__section">
+            <h3 class="footer__title">Документы</h3>
+            <div class="footer__item">
+               <a>Договор-оферта</a>
+            </div>
+            <div class="footer__item">
+               <a>Сертификаты</a>
+            </div>
+            <div class="footer__item">
+               <a>Статьи о чае</a>
+            </div>
+            <div class="footer__item">
+               <a>Политика конфиденциальности</a>
+            </div>
+          </section>
+          <section class="footer__section">
+            <h3 class="footer__title">Покупателям</h3>
+            <div class="footer__item">
+               <a>Доставка</a>
+            </div>
+            <div class="footer__item">
+               <a>Оплата</a>
+            </div>
+            <div class="footer__item">
+               <a>Обмен и возврат</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </footer>
+    <!-- Модалка для картинок (Лайтбокс) -->
+    <div class="lightbox">
+      <button class="lightbox__close" id="lightbox-close" aria-label="Закрыть">&times;</button>
+      <img class="lightbox__img" id="lightbox-img" src="" alt="Увеличенное изображение">
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,52 @@
+.footer {
+  padding: 64rem 0;
+  background-color: $c-bg-secondary;
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rem;
+}
+
+.footer__section {
+  width: 100%;
+  flex-shrink: 0;
+
+  @include md {
+    width: calc(25% - 12rem);
+  }
+}
+
+.footer__title {
+  margin-bottom: 32rem;
+  font-size: 24rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $c-text-dark-1;
+}
+
+.footer__item {
+  margin-bottom: 16rem;
+  font-size: 18rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $c-text-dark-2;
+
+  a {
+    cursor: pointer;
+
+    @include transition();
+
+    &:hover {
+      color: $c-text-dark-4;
+    }
+  }
+}
+
+.footer__subtitle {
+  margin-bottom: 8rem;
+  font-size: 18rem;
+  font-weight: 700;
+  color: $c-text-dark-1;
+}

@@ -1,0 +1,30 @@
+.side-menu__title {
+  height: 48rem;
+  padding-left: 24rem;
+  display: flex;
+  align-items: center;
+  background-color: $c-bg-secondary;
+  font-size: 22rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $c-text-dark-2;
+}
+
+.side-menu__item {
+  height: 48rem;
+  padding-left: 24rem;
+  display: flex;
+  align-items: center;
+  border-top: 1rem solid $c-border-gray;
+  background-color: $c-bg-primary;
+  font-size: 18rem;
+  font-weight: 700;
+  color: $c-text-dark-3;
+  cursor: pointer;
+
+  @include transition();
+
+  &:hover {
+    color: $c-text-dark-1;
+  }
+}

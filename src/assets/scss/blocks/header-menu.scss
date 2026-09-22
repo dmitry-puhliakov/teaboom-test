@@ -1,0 +1,60 @@
+.header-menu {
+  height: 100rem;
+  display: flex;
+  align-items: center;
+  gap: 48rem;
+  background-color: $c-header-bg;
+
+  @include sm {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    gap: 48rem;
+    transform: translateX(100%);
+
+    @include transition(transform);
+
+    &.header-menu--active {
+      transform: translateX(0);
+    }
+
+    .header-menu__item--close {
+      position: absolute;
+      right: 28rem;
+      top: 16rem;
+      display: block;
+      font-size: 48rem;
+      font-weight: 400;
+    }
+  }
+
+  @include md {
+    border-block: 1rem solid $c-header-border;
+  }
+}
+
+.header-menu__item {
+  font-size: 20rem;
+  font-weight: 700;
+  color: $c-text-dark-1;
+  text-transform: uppercase;
+
+  @include transition();
+
+  &:hover {
+    color: $c-text-dark-3;
+  }
+
+  a {
+    cursor: pointer;
+  }
+}
+
+.header-menu__item--close {
+  display: none;
+}

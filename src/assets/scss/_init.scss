@@ -1,0 +1,39 @@
+html {
+  overflow-x: hidden;
+  font-size: $base-font-size;
+
+  @include md {
+    font-size: calc((100vw / #{$md-top}) * $base-font-size);
+  }
+
+  @include lg {
+    font-size: calc((100vw / #{$lg-top}) * $base-font-size);
+  }
+
+  &:has(body.scroll-lock) {
+    overflow: hidden;
+  }
+}
+
+body {
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+
+  &.scroll-lock {
+    overflow: hidden;
+  }
+}
+
+main {
+  width: 100%;
+}
+
+aside {
+  display: none;
+
+  @include md {
+    width: 270rem;
+    display: block;
+  }
+}

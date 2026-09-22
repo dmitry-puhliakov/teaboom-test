@@ -1,0 +1,50 @@
+@mixin sm {
+  @media (max-width: $sm-top) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: $md-bottom) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $lg-bottom) {
+    @content;
+  }
+}
+
+@mixin transition($prop: all, $duration: 0.3s, $timing-function: cubic-bezier(0.25, 0.1, 0.25, 1)) {
+  transition: $prop $duration $timing-function;
+}
+
+@mixin hideScrollbar() {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  user-select: none;
+
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    color: transparent;
+    background-color: transparent;
+    display: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    display: none;
+  }
+
+  & {
+    scrollbar-width: none;
+  }
+}

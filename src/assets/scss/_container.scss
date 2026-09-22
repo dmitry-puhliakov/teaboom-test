@@ -1,0 +1,13 @@
+._container {
+  padding: 0 16rem;
+
+  @include md {
+    padding: 0 24rem;
+  }
+
+  @include lg {
+    max-width: $md-top;
+    margin: 0 auto;
+    padding: 0;
+  }
+}

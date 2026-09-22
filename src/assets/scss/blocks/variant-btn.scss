@@ -1,0 +1,9 @@
+  .variant-btn {
+    flex: 1;
+  }
+
+  .variant-btn--active {
+    background-color: $c-btn-bg-hover;
+    color: $c-btn-text-hover;
+    pointer-events: none;
+  }
